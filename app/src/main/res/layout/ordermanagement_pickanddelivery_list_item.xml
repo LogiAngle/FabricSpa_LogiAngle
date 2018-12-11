@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="0dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_border_assigned"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/delivery_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/textViewOrderNumber"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="0.4"
+                        android:gravity="left"
+                        android:text="tgther-ORDER-0000001"
+                        android:textStyle="bold"
+                        />
+
+                    <!-- <TextView
+                         android:id="@+id/textViewCRM"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_margin="3dp"
+                         android:layout_weight="0.6"
+                         android:gravity="right"
+                         android:text="0001"
+                         />
+ -->
+                    <TextView
+                        android:id="@+id/textViewStatus"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="0.6"
+                        android:gravity="right"
+                        android:text="Pickup Delivery"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="3dp">
+                <TextView
+                    android:id="@+id/textViewCRM"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:text="0001"
+                    />
+            </LinearLayout>
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/delivery_address"
+                android:layout_centerVertical="true"
+                android:background="#000000" />
+            <LinearLayout
+                android:id="@+id/delivery_edit_delete_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/container_for_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:drawablePadding="5dp"
+
+                        android:text="Pick Up"
+                        />
+
+                    <View
+                        android:id="@+id/innerLine1"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#000000" />
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="7dp"
+
+                        android:layout_toLeftOf="@+id/delivery_edit"
+                        android:drawablePadding="5dp"
+                        android:paddingRight="20dp"
+                        android:text="Delivery"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/container_for_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/pickUp_Name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:text="Santosh Patil" />
+
+                    <View
+                        android:id="@+id/innerLine1"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#000000" />
+
+                    <TextView
+                        android:id="@+id/delivery_Name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="7dp"
+                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                        android:layout_toLeftOf="@+id/delivery_edit"
+                        android:drawablePadding="5dp"
+                        android:paddingRight="20dp"
+                        android:text="Santosh Patil"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/container_for_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="DuplicateIds">
+
+                    <TextView
+                        android:id="@+id/pickUp_MobileNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_contact_phone_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:text="9922723862" />
+
+                    <View
+                        android:id="@+id/innerLine1"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#000000" />
+
+                    <TextView
+                        android:id="@+id/delivery_MobileNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="7dp"
+                        android:drawableLeft="@drawable/ic_contact_phone_black_24dp"
+                        android:layout_toLeftOf="@+id/delivery_edit"
+                        android:drawablePadding="5dp"
+                        android:paddingRight="20dp"
+                        android:text="9922723862"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/container_for_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/pickUp_DateTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                        android:text="2017-09-07 20:12:12"
+                        />
+
+                    <View
+                        android:id="@+id/innerLine1"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#000000" />
+
+                    <TextView
+                        android:id="@+id/delivery_DateTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="7dp"
+                        android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                        android:layout_toLeftOf="@+id/delivery_edit"
+                        android:drawablePadding="5dp"
+
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/container_for_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/pickUp_Address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:drawablePadding="5dp"
+                        android:text="Shivajinagar, Pune, Maharashtra, India"
+                        android:drawableLeft="@drawable/ic_my_location_black_24dp"
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="NewApi" />
+
+                    <View
+                        android:id="@+id/innerLine"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#000000" />
+
+                    <TextView
+                        android:id="@+id/delivery_Address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="7dp"
+                        android:layout_toLeftOf="@+id/delivery_edit"
+                        android:drawablePadding="5dp"
+                        android:text="Shivajinagar, Pune, Maharashtra, India"
+                        android:textColor="@color/colorPrimary"
+                        android:drawableLeft="@drawable/ic_my_location_black_24dp"
+
+                        tools:ignore="NewApi" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/view3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/delivery_edit_delete_layout"
+                android:layout_centerVertical="true"
+                android:background="#000000" />
+            <LinearLayout
+                android:id="@+id/Status_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <Switch
+                        android:id="@+id/toggleButtonStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.46"
+                        android:gravity="center"
+                        android:splitTrack="false"
+                        android:textOff="Incomplete"
+                        android:textOn="complete"
+                        android:theme="@style/SCBSwitch"
+                        tools:ignore="NewApi" />
+
+                    <Switch
+                        android:id="@+id/toggleButtonPickedUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.46"
+                        android:splitTrack="false"
+                        android:layout_gravity="center"
+                        android:theme="@style/SCBSwitch"
+                        tools:ignore="NewApi" />
+                    <Switch
+                        android:id="@+id/toggleButtonComplete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.46"
+                        android:splitTrack="false"
+                        android:layout_gravity="center"
+                        android:theme="@style/SCBSwitch"
+                        tools:ignore="NewApi" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".46"
+                        android:text="Start"
+                        android:gravity="right"
+                        />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.46"
+                        android:gravity="right"
+                        android:text="Picked Up" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.46"
+                        android:gravity="right"
+                        android:text="Complete" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view4"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/Status_layout"
+                android:layout_centerVertical="true"
+                android:background="#000000" />
+            <LinearLayout
+                android:id="@+id/Status_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view4"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/textViewOrderDetail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.2"
+                        android:drawableTop="@drawable/ic_art_track_black_24dp"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="Order Detail" />
+
+                    <TextView
+                        android:id="@+id/textViewPOD"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.2"
+                        android:drawableTop="@drawable/ic_add_a_photo_black_24dp"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="POD" />
+
+                    <TextView
+                        android:id="@+id/textViewCash"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.2"
+                        android:drawableTop="@drawable/ic_attach_money_black_24dp"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="Cash" />
+
+                    <TextView
+                        android:id="@+id/textViewMap"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.2"
+                        android:drawableTop="@drawable/reschedule"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="Reschedule"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

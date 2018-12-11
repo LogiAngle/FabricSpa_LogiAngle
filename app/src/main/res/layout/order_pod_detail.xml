@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="0dp"
+            android:layout_marginTop="13dp"
+            android:elevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/order_info_card_design"
+                android:orientation="vertical"
+                android:elevation="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txtOrderNumber"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="3dp"
+                        android:layout_weight="0.4"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:text="Order Number"/>
+
+                    <TextView
+                        android:id="@+id/txtTaskType"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="0.6"
+                        android:layout_marginTop="10dp"
+                        android:gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:text="Intransit"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txtClientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Client Name" />
+                    <TextView
+                        android:id="@+id/txtClientMobileNumber"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Client mobile" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="0dp"
+            android:layout_marginTop="13dp"
+            android:elevation="20dp">
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.Large.ChasingDots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:SpinKit_Color="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints"
+                xml:app="http://schemas.amdroid.com/apk/res-auto"></com.github.ybq.android.spinkit.SpinKitView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/order_info_card_design"
+                android:orientation="vertical"
+                android:elevation="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+                    <TextView
+                        android:id="@+id/btn_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/camera"/>
+                    <TextView
+                        android:id="@+id/btn_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/signature"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crdView_Image"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="0dp"
+            android:layout_marginTop="13dp"
+            android:elevation="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/order_info_card_design"
+                android:orientation="vertical"
+                android:elevation="20dp">
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+
+                                    android:orientation="horizontal">
+
+                                   <!-- <LinearLayout
+                                        android:id="@+id/ll_Sign"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.333"
+                                        android:orientation="horizontal">
+
+                                        <FrameLayout
+                                            android:layout_width="100dp"
+                                            android:layout_height="100dp">
+
+                                            <ImageView
+                                                android:id="@+id/imgSign"
+                                                android:layout_width="100dp"
+                                                android:layout_height="100dp"
+
+                                                android:src="@mipmap/signature_place_holder"
+                                                android:tag="tag_image_holder" />
+
+                                            <ImageView
+                                                android:id="@+id/ivImage1Refresh6"
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+                                                android:layout_gravity="bottom|right"
+                                                android:src="@mipmap/ic_refresh_black_24dp"
+                                                android:tint="@color/colorPrimary" />
+                                        </FrameLayout>
+                                    </LinearLayout>-->
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_image1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.333"
+                                        android:orientation="vertical">
+
+                                        <FrameLayout
+                                            android:layout_width="150dp"
+                                            android:layout_height="130dp">
+
+                                            <ImageView
+                                                android:id="@+id/imgCamera1"
+                                                android:layout_width="150dp"
+                                                android:layout_height="130dp"
+                                                android:layout_gravity="center"
+                                                android:src="@mipmap/image_holder"
+                                                android:tag="@string/image_place_holder_tag" />
+
+                                            <ImageView
+                                                android:id="@+id/ivImage1Refresh"
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+                                                android:layout_gravity="bottom|right"
+                                                android:src="@mipmap/ic_refresh_black_24dp"
+                                                android:tint="@color/colorPrimary" />
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_image2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.333"
+                                        android:orientation="horizontal">
+
+                                        <FrameLayout
+                                            android:layout_width="150dp"
+                                            android:layout_height="130dp">
+
+                                            <ImageView
+                                                android:id="@+id/imgCamera2"
+                                                android:layout_width="150dp"
+                                                android:layout_height="130dp"
+                                                android:src="@mipmap/image_holder"
+                                                android:tag="@string/image_place_holder_tag" />
+
+                                            <ImageView
+                                                android:id="@+id/ivImage2Refresh"
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+                                                android:layout_gravity="bottom|right"
+                                                android:src="@mipmap/ic_refresh_black_24dp"
+                                                android:tint="@color/colorPrimary" />
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:id="@+id/ll_image3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.333"
+                                    android:orientation="horizontal">
+
+                                    <FrameLayout
+                                        android:layout_width="150dp"
+                                        android:layout_height="130dp">
+
+                                        <ImageView
+                                            android:id="@+id/imgCamera3"
+                                            android:layout_width="150dp"
+                                            android:layout_height="130dp"
+                                            android:src="@mipmap/image_holder"
+                                            android:tag="@string/image_place_holder_tag" />
+
+                                        <ImageView
+                                            android:id="@+id/ivImage3Refresh"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="bottom|right"
+                                            android:src="@mipmap/ic_refresh_black_24dp"
+                                            android:tint="@color/colorPrimary" />
+                                    </FrameLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/ll_Sign"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.333"
+                                    android:orientation="horizontal">
+
+                                    <FrameLayout
+                                        android:layout_width="150dp"
+                                        android:layout_height="130dp">
+
+                                        <ImageView
+                                            android:id="@+id/imgSign"
+                                            android:layout_width="150dp"
+                                            android:layout_height="130dp"
+
+                                            android:src="@mipmap/signature_place_holder"
+                                            android:tag="tag_image_holder" />
+
+                                        <ImageView
+                                            android:id="@+id/ivImage1Refresh6"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="bottom|right"
+                                            android:src="@mipmap/ic_refresh_black_24dp"
+                                            android:tint="@color/colorPrimary" />
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                                <Button
+                                    android:id="@+id/btnImageAck"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="16dp"
+                                    android:background="@drawable/rounded_button"
+                                    android:gravity="center"
+                                    android:text="Submit"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                </RelativeLayout>
+                </android.support.v4.widget.NestedScrollView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</LinearLayout>

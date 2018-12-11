@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/popup_element"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/textProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:imeOptions="actionNext"
+        android:padding="10dp"
+        android:maxLength="50"
+        android:hint="Name"/>
+    <EditText
+        android:id="@+id/textProductDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:imeOptions="actionNext"
+        android:padding="10dp"
+        android:maxLength="50"
+        android:hint="Description"/>
+
+    <EditText
+        android:id="@+id/textProductUnitPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoText="true"
+        android:inputType="number|numberDecimal"
+        android:imeOptions="actionNext"
+        android:hint="Unit Price"
+        android:maxLength="15"
+        android:padding="10dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/textProductQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:maxLength="15"
+        android:padding="10dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveButton"
+            android:text="Save"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearButton"
+            android:text="Clear"
+
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

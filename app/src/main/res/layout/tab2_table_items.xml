@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <!--<TableRow
+       android:layout_width="5dp"
+       android:layout_height="wrap_content"
+       android:id="@+id/display_row"
+       android:layout_marginTop="5dip">
+   -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_display_no"
+        android:layout_weight="0.15"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/history_display_date"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:padding="5dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/history_display_orderid"
+        android:layout_weight="0.15"
+        android:gravity="center"
+        android:padding="5dp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/history_display_quantity"
+        android:layout_weight="0.15"
+        android:gravity="center"
+        android:padding="5dp"/>
+</TableRow>

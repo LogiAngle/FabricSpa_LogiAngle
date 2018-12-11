@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.togethersolutions.logiangle">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logiangle_icon_iransparent"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logiangle_icon_iransparent"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+
+        <activity android:name=".activities.Splash" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.LoginActivity" android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="OPEN_ACTIVITY_1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.OrderHistoryInformation"
+            android:label="@string/order_detail"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.OrderInformation"
+            android:label="@string/order_detail"
+            android:theme="@style/AppTheme1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Sign" />
+        <activity android:name=".activities.OrdersOnMap"
+            android:screenOrientation="portrait"/>
+
+        <!-- [START firebase_service] -->
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+
+
+        <!-- [START firebase_iid_service] -->
+        <service android:name=".services.MyFirebaseInstanceIdService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- [END firebase_iid_service] -->
+
+        <receiver android:name=".receivers.BootCompletedIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="restartservice" />
+                <action android:name="android.intent.action.REBOOT"/>
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"/>
+
+            </intent-filter>
+
+        </receiver>
+        <service android:name=".services.LocationService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:stopWithTask="false" />
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="3ccf9e872a97b9a81eaed063cf2cb65264e3521e" />
+
+        <activity android:name=".activities.PasswordChange" />
+
+        <activity
+            android:name=".activities.Reschedule"
+            android:screenOrientation="portrait"
+            android:label="Reschedule"
+            android:theme="@style/AppTheme1" />
+      <!--  <service
+            android:name=".services.BackGroundTimer"
+            android:exported="false" />-->
+        <service
+            android:name=".services.NotificationService"
+            android:exported="false"
+            android:stopWithTask="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
+        <service android:enabled="true"
+            android:name=".services.CheckAllServicesWorking"
+            android:stopWithTask="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" >
+
+        </service>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCp1qOA9giTqV98HiIIqCGbFJnSiL-3LaY" />
+
+        <activity android:name=".activities.OrderInformationNew"
+            android:screenOrientation="portrait"
+            android:label="Order Information"></activity>
+
+        <receiver
+            android:name=".receivers.NetworkChangeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receivers.ConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

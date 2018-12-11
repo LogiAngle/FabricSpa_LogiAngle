@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewOrderNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/card_border_assigned"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:text="Order Number"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/expandableButton3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="expandableButton3"
+            android:paddingRight="10dp"
+            android:text="Order Details"
+            android:textColor="@android:color/white" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandableButton3"
+            android:background="#ffffff"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="bounce"
+            app:ael_orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/spin_kit1"
+                    style="@style/SpinKitView.Large.ChasingDots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    app:SpinKit_Color="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    xml:app="http://schemas.amdroid.com/apk/res-auto"></com.github.ybq.android.spinkit.SpinKitView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textAddItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/plus_symbol" />
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableLayout
+                            android:id="@+id/tableLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#f9f7f7">
+
+                        </TableLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+        <Button
+            android:id="@+id/expandableButton4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="expandableButton4"
+            android:paddingRight="10dp"
+            android:text="Order Details"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandableButton3"
+            android:background="#ffffff"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="bounce"
+            app:ael_orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"></RelativeLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <Button
+            android:id="@+id/expandableButton1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandableButton3"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="expandableButton1"
+            android:paddingRight="10dp"
+            android:text="POD"
+            android:textColor="#ffffff" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/expandableButton1"
+            android:background="#ffffff"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="bounce"
+            app:ael_orientation="vertical">
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit2"
+                style="@style/SpinKitView.Large.ChasingDots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:SpinKit_Color="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                xml:app="http://schemas.amdroid.com/apk/res-auto"></com.github.ybq.android.spinkit.SpinKitView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.333"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.333"
+                                    android:orientation="horizontal">
+
+                                    <FrameLayout
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp">
+
+                                        <ImageView
+                                            android:id="@+id/imageView3"
+                                            android:layout_width="100dp"
+                                            android:layout_height="100dp"
+                                            android:src="@mipmap/signature_place_holder"
+                                            android:tag="tag_image_holder" />
+
+                                        <ImageView
+                                            android:id="@+id/ivImage1Refresh6"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="bottom|right"
+                                            android:src="@mipmap/ic_refresh_black_24dp"
+                                            android:tint="@color/colorPrimary" />
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.333"
+                                    android:orientation="vertical">
+
+                                    <FrameLayout
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp">
+
+                                        <ImageView
+                                            android:id="@+id/imageView1"
+                                            android:layout_width="100dp"
+                                            android:layout_height="100dp"
+                                            android:src="@mipmap/image_holder"
+                                            android:tag="@string/image_place_holder_tag" />
+
+                                        <ImageView
+                                            android:id="@+id/ivImage1Refresh4"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="bottom|right"
+                                            android:src="@mipmap/ic_refresh_black_24dp"
+                                            android:tint="@color/colorPrimary" />
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.333"
+                                    android:orientation="horizontal">
+
+                                    <FrameLayout
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp">
+
+                                        <ImageView
+                                            android:id="@+id/imageView2"
+                                            android:layout_width="100dp"
+                                            android:layout_height="100dp"
+                                            android:src="@mipmap/image_holder"
+                                            android:tag="@string/image_place_holder_tag" />
+
+                                        <ImageView
+                                            android:id="@+id/ivImage1Refresh5"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="bottom|right"
+                                            android:src="@mipmap/ic_refresh_black_24dp"
+                                            android:tint="@color/colorPrimary" />
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/buttomImageAck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/rounded_button"
+                                android:gravity="center"
+                                android:text="Submit"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+        <Button
+            android:id="@+id/expandableButton2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandableLayout1"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="expandableButton2"
+            android:paddingRight="10dp"
+
+            android:text="Cash"
+            android:textColor="#ffffff" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/expandableButton2"
+            android:background="#ffffff"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="bounce"
+            app:ael_orientation="vertical">
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit3"
+                style="@style/SpinKitView.Large.ChasingDots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:SpinKit_Color="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                xml:app="http://schemas.amdroid.com/apk/res-auto"></com.github.ybq.android.spinkit.SpinKitView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="228dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="3dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Total amount to be collected : "
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewCash"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_margin="3dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.5"
+                        android:gravity="right"
+                        android:text="6000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextPaidAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:background="@drawable/edittext_reounded_bg"
+                        android:hint="Amount"
+                        android:imeOptions="actionNext"
+                        android:inputType="number|numberDecimal"
+                        android:padding="8dp"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/edittext_reounded_bg"
+                        android:ems="10"
+
+                        android:hint="Notes"
+                        android:inputType="textMultiLine"
+                        android:padding="8dp" />
+
+                    <Button
+                        android:id="@+id/buttonSubmitCash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_button"
+                        android:text="Submit"
+
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.ChasingDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:SpinKit_Color="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            xml:app="http://schemas.amdroid.com/apk/res-auto"></com.github.ybq.android.spinkit.SpinKitView>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

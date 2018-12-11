@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">LogiAngle</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+
+
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="title_activity_dashboard">LogiAngle</string>
+
+    <string name="LOGIN_LABLE">Login</string>
+    <string name="order_management">Order Management</string>
+    <string name="logout">Logout</string>
+    <string name="pod">POD</string>
+    <string name="order_detail">Order Detail</string>
+    <string name="order_history">Order History</string>
+    <string name="map">Map</string>
+    <string name="cash">Cash</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="title_activity_maps">Map</string>
+    <string name="image_place_holder_tag">tag_image_holder</string>
+    <string name="title_activity_order_history2">OrderHistory2</string>
+    <string name="title_activity_order_history_information">OrderHistoryInformation</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="order_detail1"><u><i>Order Detail</i></u></string>
+    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_breached">Breached Orders</string>
+    <string name="title_activity_rider_route_on_map">Map</string>
+    <string name="orderhistory">OrderHistory</string>
+    <string name="no_data_available">No Data Available</string>
+    <string name="remember_me">Remember me?</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="registered_email_id">Registered Email ID</string>
+    <string name="reason_to_cancel">Select Reason</string>
+    <string name="note">Note</string>
+    <string name="Forgot_Password_Check_Fail">Either registered Email ID or User ID is incorrect</string>
+    <string name="Already_logged_in">Already logged in into another device</string>
+    <string name="Version_Name">Version Fabric_00010</string>
+
+
+    <string-array name="cancle_reason">
+        <item>Customer not Available</item>
+        <item>Duplicate pickup</item>
+        <item>Logistics not reached</item>
+        <item>Prices High</item>
+        <item>Customer Cancelled the pickup</item>
+        <item>Customer Postponed</item>
+        <item>Other</item>
+    </string-array>
+</resources>

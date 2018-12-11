@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <AutoCompleteTextView
+            android:id="@+id/txtProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/product_name"
+            />
+        <EditText
+            android:id="@+id/txtProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/product_description"/>
+        <EditText
+            android:id="@+id/txtQuantity"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="number|numberDecimal"
+            android:drawableLeft="@drawable/ic_cart"
+            android:layout_weight="0.5"/>
+        <!--<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/quantity"
+                android:layout_weight="0.5"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/uom"/>
+        </LinearLayout>-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/txtUnitPrice"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:inputType="number|numberDecimal"
+                android:drawableLeft="@drawable/unit_price"/>
+            <EditText
+                android:id="@+id/txtGST"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:inputType="number|numberDecimal"
+                android:enabled="false"
+                android:drawableLeft="@drawable/tax"/>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/txtTotalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:drawableLeft="@drawable/indian_rupia"/>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/white"
+            android:text="Submit"/>
+    </LinearLayout>
+
+</LinearLayout>

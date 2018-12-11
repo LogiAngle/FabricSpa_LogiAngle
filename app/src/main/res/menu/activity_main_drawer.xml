@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    xmlns:app ="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ordermanagement"
+            android:icon="@drawable/order_management"
+            app:actionViewClass = "android.widget.TextView"
+            android:title="Order Management" />
+        <item
+            android:id="@+id/nav_orderhistory"
+            android:icon="@drawable/order_history"
+            android:title="Order History"
+            />
+        <item
+            android:id="@+id/nav_breached"
+            android:icon="@drawable/breached_order"
+            android:title="Breached Orders"
+            />
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/notification"
+            android:title="Notification" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+    </group>
+
+</menu>
